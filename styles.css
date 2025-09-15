@@ -1,0 +1,45 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background: #f4f4f9;
+}
+
+/* Part 1: CSS3 Transitions & Animations */
+.fancy-btn {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s; /* Smooth effect */
+}
+
+.fancy-btn:hover {
+  transform: scale(1.2); /* Grows bigger */
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+/* The box for animation */
+.box {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+/* Keyframe animation (sliding + fading) */
+@keyframes slideFade {
+  0%   { transform: translateX(0); opacity: 1; }
+  50%  { transform: translateX(200px); opacity: 0.5; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Hidden by default */
+.animate {
+  animation: slideFade 2s ease-in-out forwards;
+}
